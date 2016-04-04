@@ -4,11 +4,6 @@ buildscript {
     repositories {
         jcenter()
 
-        ivy {
-            name = "BuildCraft"
-            artifactPattern "http://www.mod-buildcraft.com/releases/BuildCraft/[revision]/[module]-[revision].[ext]"
-        }
-
         maven {
             name = "forge"
             url = "http://files.minecraftforge.net/maven"
@@ -43,9 +38,24 @@ minecraft {
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
-dependencies {
+repositories {
+    ivy {
+        name "BuildCraft"
+        artifactPattern "http://www.mod-buildcraft.com/releases/BuildCraft/[revision]/[module]-[revision]-[classifier].[ext]"
+    }
+}
 
+//Add "embedded" configuration
+configurations { // Taken from https://github.com/MinecraftForge/ForgeGradle/wiki/Dependencies
+    embed
+    compile.extendsFrom(embed)
+}
+
+dependencies {
+	// Use BC in the dev environment. Comment this out to NOT use it
     deobfCompile name: "buildcraft", version: "7.2.5"
+    // Embed the BC API in our jar
+    embed name: "buildcraft", version: "7.2.5", classifier: "api"
 
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
@@ -70,6 +80,11 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
+}
+
+//Add dependencies to the JAR
+jar {
+    from configurations.embed.collect { it.isDirectory() ? it : zipTree(it) }
 }
 
 processResources
