@@ -1,5 +1,3 @@
-gradle check
-
 language: java
 
 before_cache:
