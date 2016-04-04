@@ -1,5 +1,8 @@
 language: java
 
+before_install:
+ - chmod +x gradlew
+
 addons:
     code_climate:
         repo_token: 9bd8824647c993546257ace05ddc20bb1c2d59bcfce6c0f3862f616cf7389ace
