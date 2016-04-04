@@ -45,8 +45,15 @@ repositories {
     }
 }
 
+//Add "embedded" configuration
+configurations { // Taken from https://github.com/MinecraftForge/ForgeGradle/wiki/Dependencies
+    embed
+    compile.extendsFrom(embed)
+}
+
 dependencies {
     deobfCompile name: "buildcraft", version: "7.2.5"
+    embed name: "buildcraft", version: "7.2.5", classifier: "api"
 
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
@@ -71,6 +78,11 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
+}
+
+//Add dependencies to the JAR
+jar {
+    from configurations.embed.collect { it.isDirectory() ? it : zipTree(it) }
 }
 
 processResources
