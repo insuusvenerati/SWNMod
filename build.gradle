@@ -4,11 +4,6 @@ buildscript {
     repositories {
         jcenter()
 
-        ivy {
-            name = "BuildCraft"
-            artifactPattern "http://www.mod-buildcraft.com/releases/BuildCraft/[revision]/[module]-[revision].[ext]"
-        }
-
         maven {
             name = "forge"
             url = "http://files.minecraftforge.net/maven"
@@ -43,8 +38,14 @@ minecraft {
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
-dependencies {
+repositories {
+    ivy {
+        name "BuildCraft"
+        artifactPattern "http://www.mod-buildcraft.com/releases/BuildCraft/[revision]/[module]-[revision]-[classifier].[ext]"
+    }
+}
 
+dependencies {
     deobfCompile name: "buildcraft", version: "7.2.5"
 
     // you may put jars on which you depend on in ./libs
