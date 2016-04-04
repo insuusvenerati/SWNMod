@@ -52,7 +52,9 @@ configurations { // Taken from https://github.com/MinecraftForge/ForgeGradle/wik
 }
 
 dependencies {
+	// Use BC in the dev environment. Comment this out to NOT use it
     deobfCompile name: "buildcraft", version: "7.2.5"
+    // Embed the BC API in our jar
     embed name: "buildcraft", version: "7.2.5", classifier: "api"
 
     // you may put jars on which you depend on in ./libs
