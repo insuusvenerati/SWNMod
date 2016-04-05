@@ -1,8 +1,10 @@
-package com.stiforr.swnmod.Reference;
+package com.stiforr.swnmod.reference;
 
 public interface References {
     String MOD_ID = "swnmod";
     String VERSION = "0.0.1";
     String NAME = "SWNMod";
+    String CLIENT_PROXY = "com.stiforr.swnmod.proxy.ClientProxy";
+    String SERVER_PROXY = "com.stiforr.swnmod.proxy.ServerProxy";
 
 }

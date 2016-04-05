@@ -34,28 +34,36 @@ minecraft {
     // stable_#            stables are built at the discretion of the MCP team.
     // Use non-default mappings at your own risk. they may not allways work.
     // simply re-run your setup task after changing the mappings to update your workspace.
-    mappings = "stable_20"
+    mappings = "stable_22"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
-repositories {
-    ivy {
-        name "BuildCraft"
-        artifactPattern "http://www.mod-buildcraft.com/releases/BuildCraft/[revision]/[module]-[revision]-[classifier].[ext]"
-    }
-}
+//repositories {
+//    ivy {
+//        name "BuildCraft"
+//        artifactPattern "http://www.mod-buildcraft.com/releases/BuildCraft/[revision]/[module]-[revision]-[classifier].[ext]"
+//    }
+//    maven {
+//        name "EnderIO"
+//        url = "http://maven.tterrag.com"
+//    }
+//}
+
+
 
 //Add "embedded" configuration
-configurations { // Taken from https://github.com/MinecraftForge/ForgeGradle/wiki/Dependencies
-    embed
-    compile.extendsFrom(embed)
-}
+//configurations { // Taken from https://github.com/MinecraftForge/ForgeGradle/wiki/Dependencies
+//    embed
+//    compile.extendsFrom(embed)
+//}
 
 dependencies {
 	// Use BC in the dev environment. Comment this out to NOT use it
-    deobfCompile name: "buildcraft", version: "7.2.5"
+    //deobfCompile name: "buildcraft", version: "7.2.5"
+    //deobfCompile "com.enderio:EnderIO:1.8.9-3.0.0.9_alpha"
     // Embed the BC API in our jar
-    embed name: "buildcraft", version: "7.2.5", classifier: "api"
+   // embed name: "buildcraft", version: "7.2.5", classifier: "api"
+    //embed name: "enderio", version: "1.8.9-3.0.0.9", classifier: "api"
 
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
@@ -83,9 +91,9 @@ dependencies {
 }
 
 //Add dependencies to the JAR
-jar {
-    from configurations.embed.collect { it.isDirectory() ? it : zipTree(it) }
-}
+//jar {
+//    from configurations.embed.collect { it.isDirectory() ? it : zipTree(it) }
+//}
 
 processResources
 {
