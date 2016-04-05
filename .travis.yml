@@ -1,5 +1,13 @@
 language: java
 
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/3e9a842c5cc5c56a1801
+    on_success: always  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: always     # options: [always|never|change] default: always
+
 before_install:
  - chmod +x gradlew
 
