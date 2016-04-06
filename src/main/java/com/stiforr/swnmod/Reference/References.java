@@ -6,5 +6,6 @@ public interface References {
     String NAME = "SWNMod";
     String CLIENT_PROXY = "com.stiforr.swnmod.proxy.ClientProxy";
     String SERVER_PROXY = "com.stiforr.swnmod.proxy.ServerProxy";
+    String GUI_FACTORY = "com.stiforr.swnmod.client.gui.GuiFactory";
 
 }
