@@ -16,6 +16,8 @@ public class SwordBase extends ItemSword{
     public SwordBase(ToolMaterial material) {
         super(material);
         this.setCreativeTab(CreativeTabSWN.SWN_Tab);
+        this.maxStackSize = 1;
+        this.setMaxDamage(material.getMaxUses());
 
     }
 

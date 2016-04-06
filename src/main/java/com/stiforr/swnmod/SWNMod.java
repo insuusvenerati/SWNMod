@@ -29,8 +29,6 @@ public class SWNMod {
 
         ModItems.init();
 
-
-
         ConfigurationHandler.init(e.getSuggestedConfigurationFile());
 
 

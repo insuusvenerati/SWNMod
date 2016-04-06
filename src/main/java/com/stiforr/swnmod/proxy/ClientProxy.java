@@ -11,11 +11,7 @@ public class ClientProxy extends CommonProxy{
     @Override
     public void preInit(FMLPreInitializationEvent e) {
         super.preInit(e);
-    }
 
-    @Override
-    public void postInit(FMLPostInitializationEvent e) {
-        super.postInit(e);
     }
 
     @Override
@@ -23,5 +19,12 @@ public class ClientProxy extends CommonProxy{
         super.init(e);
         ItemRenderRegister.registerItemRenderer();
     }
+
+    @Override
+    public void postInit(FMLPostInitializationEvent e) {
+        super.postInit(e);
+    }
+
+
 
 }
