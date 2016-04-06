@@ -21,12 +21,12 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 */
-version = "0.0.1"
+version = "1.9-0.0.2"
 group= "com.stiforr.swnmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "swnmod"
 
 minecraft {
-    version = "1.8.9-11.15.1.1808"
+    version = "1.9-12.16.0.1853-1.9"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.

@@ -40,7 +40,7 @@ public class ConfigurationHandler {
     /*For the config screen*/
     @SubscribeEvent
     public void onConfigurationChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event){
-        if (event.modID.equalsIgnoreCase(References.MOD_ID)){
+        if (event.getModID().equalsIgnoreCase(References.MOD_ID)){
             loadConfiguration();
 
         }
