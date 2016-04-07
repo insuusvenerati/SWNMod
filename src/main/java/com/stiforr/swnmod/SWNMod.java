@@ -2,11 +2,10 @@ package com.stiforr.swnmod;
 
 import com.stiforr.swnmod.handlers.ConfigurationHandler;
 import com.stiforr.swnmod.init.ModItems;
-import com.stiforr.swnmod.proxy.ClientProxy;
 import com.stiforr.swnmod.proxy.CommonProxy;
-import com.stiforr.swnmod.proxy.IProxy;
 import com.stiforr.swnmod.reference.References;
 import com.stiforr.swnmod.utility.LogHelper;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;

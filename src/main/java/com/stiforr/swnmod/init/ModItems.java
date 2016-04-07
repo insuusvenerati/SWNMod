@@ -14,7 +14,8 @@ public class ModItems {
 
 
 
-    public static void init(){
+    @SuppressWarnings("deprecation")
+	public static void init(){
         //GameRegistry.registerItem(testThing);
         GameRegistry.registerItem(testSword);
 
