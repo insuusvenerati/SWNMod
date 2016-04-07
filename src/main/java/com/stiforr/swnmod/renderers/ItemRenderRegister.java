@@ -13,6 +13,9 @@ public final class ItemRenderRegister {
         reg(ModItems.testSword);
         reg(ModItems.lightSaber_dark);
         reg(ModItems.orb);
+        reg(ModItems.fantSword);
+        reg(ModItems.flameSword);
+        reg(ModItems.blazeIngot);
 
     }
 
