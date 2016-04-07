@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+
 
 @Mod(modid = References.MOD_ID, version = References.VERSION, name = References.NAME, guiFactory = References.GUI_FACTORY)
 public class SWNMod {

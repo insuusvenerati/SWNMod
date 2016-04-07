@@ -17,14 +17,16 @@ public class ModItems {
     public static Item orb;
 
 
-    public static void init(){
+    public static void init() {
         orb = new ItemBase().setRegistryName("orb").setUnlocalizedName("orb");
         testSword = new SwordBase(Item.ToolMaterial.IRON).setRegistryName("testSword").setUnlocalizedName("testSword");
-        lightSaber_dark = new SwordBase(Item.ToolMaterial.EMERALD).setRegistryName("lightSaber_dark").setUnlocalizedName("lightSaber_dark");
-        fantSword = new SwordBase(Item.ToolMaterial.EMERALD).setRegistryName("fantSword").setUnlocalizedName("fantSword");
-        flameSword = new SwordBase(Item.ToolMaterial.EMERALD).setRegistryName("flameSword").setUnlocalizedName("flameSword");
+        lightSaber_dark = new SwordBase(Item.ToolMaterial.DIAMOND).setRegistryName("lightSaber_dark").setUnlocalizedName("lightSaber_dark");
+        fantSword = new SwordBase(Item.ToolMaterial.DIAMOND).setRegistryName("fantSword").setUnlocalizedName("fantSword");
+        flameSword = new SwordBase(Item.ToolMaterial.DIAMOND).setRegistryName("flameSword").setUnlocalizedName("flameSword");
         blazeIngot = new MaterialBase().setRegistryName("blazeIngot").setUnlocalizedName("blazeIngot");
         crystal = new MaterialBase().setRegistryName("crystal").setUnlocalizedName("crystal");
+
+
     }
 
 }

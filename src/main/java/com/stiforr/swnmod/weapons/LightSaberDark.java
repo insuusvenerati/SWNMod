@@ -5,8 +5,8 @@ import com.stiforr.swnmod.reference.References;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.StatCollector;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -25,7 +25,7 @@ public class LightSaberDark extends ItemSword{
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-        tooltip.add(EnumChatFormatting.GREEN.toString() + StatCollector.translateToLocal(References.MOD_ID + ".tooltip." + "lightSaber_dark"));
+        tooltip.add(TextFormatting.GREEN.toString() + I18n.translateToLocal(References.MOD_ID + ".tooltip." + "lightSaber_dark"));
     }
 
 }
