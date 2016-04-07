@@ -24,6 +24,6 @@ public class SwordBase extends ItemSword{
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-        tooltip.add(I18n.translateToLocal(References.MOD_ID + ".tooltip." + "testSword"));
+        tooltip.add(I18n.translateToLocal(References.MOD_ID + ".tooltip." + "test_sword"));
     }
 }

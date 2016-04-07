@@ -8,7 +8,7 @@ public class ModItems {
 
 
     //public static Item testThing = new IngredientBase().setUnlocalizedName("test").setRegistryName("test");
-    public static Item testSword = new SwordBase(Item.ToolMaterial.IRON).setRegistryName("testSword").setUnlocalizedName("testSword");
+    public static Item test_sword = new SwordBase(Item.ToolMaterial.IRON).setRegistryName("test_sword").setUnlocalizedName("test_sword");
 
 
 
@@ -17,7 +17,7 @@ public class ModItems {
     @SuppressWarnings("deprecation")
 	public static void init(){
         //GameRegistry.registerItem(testThing);
-        GameRegistry.registerItem(testSword);
+        GameRegistry.registerItem(test_sword);
 
 
     }

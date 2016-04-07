@@ -37,10 +37,6 @@ public class SWNMod {
     @Mod.EventHandler
     public static void init(FMLInitializationEvent e){
         proxy.init(e);
-
-
-
-
         LogHelper.debug("Init Success");
     }
 

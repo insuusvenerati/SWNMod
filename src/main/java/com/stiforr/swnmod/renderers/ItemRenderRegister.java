@@ -10,7 +10,7 @@ public final class ItemRenderRegister {
 
 
     public static void registerItemRenderer(){
-        reg(ModItems.testSword);
+        reg(ModItems.test_sword);
 
     }
 
