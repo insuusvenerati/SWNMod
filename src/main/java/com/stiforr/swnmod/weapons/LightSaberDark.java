@@ -12,16 +12,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.List;
 
-public class SwordBase extends ItemSword{
-    /*public static String setInfo;
-    public static String setColor;*/
+public class LightSaberDark extends ItemSword{
 
-    public SwordBase(ToolMaterial material) {
+    public LightSaberDark(ToolMaterial material) {
         super(material);
-        this.setCreativeTab(CreativeTabSWN.SWN_Tab);
-        this.maxStackSize = 1;
-        this.setMaxDamage(material.getMaxUses());
-
+        setCreativeTab(CreativeTabSWN.SWN_Tab);
+        setUnlocalizedName("lightSaber_dark");
+        setRegistryName("lightSaber_dark");
+        setMaxStackSize(1);
     }
 
     @Override
@@ -30,12 +28,4 @@ public class SwordBase extends ItemSword{
         tooltip.add(EnumChatFormatting.GREEN.toString() + StatCollector.translateToLocal(References.MOD_ID + ".tooltip." + "lightSaber_dark"));
     }
 
-    /*public static String setTooltip(){
-        return setColor + setInfo;
-    }
-
-    @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List tooltip, boolean advanced){
-        tooltip.add(setTooltip());
-    }*/
 }

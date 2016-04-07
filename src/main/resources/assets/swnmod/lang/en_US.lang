@@ -1,2 +1,6 @@
-swnmod.tooltip.testSword=A Tooltip
-item.testSword.name=Test Sword
+swnmod.tooltip.lightSaber_dark=§c§lWelcome to the Dark Side§r
+
+item.lightSaber_dark.name=§a§oLight Saber§r
+item.testSword.name=§a§oItalic Green Text§r §c§lBold Red Text§r
+
+item.orb.name=§c§lDark Orb§r

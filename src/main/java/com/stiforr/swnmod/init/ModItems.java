@@ -1,26 +1,24 @@
 package com.stiforr.swnmod.init;
 
+import com.stiforr.swnmod.items.ItemBase;
 import com.stiforr.swnmod.weapons.SwordBase;
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
 
+    public static Item testSword;
+    public static Item lightSaber_dark;
 
-    //public static Item testThing = new IngredientBase().setUnlocalizedName("test").setRegistryName("test");
-    public static Item testSword = new SwordBase(Item.ToolMaterial.IRON).setRegistryName("testSword").setUnlocalizedName("testSword");
+    public static Item orb;
 
-
-
-
-
-    public static void init(){
-        //GameRegistry.registerItem(testThing);
-        GameRegistry.registerItem(testSword);
-
-
+    static {
+        testSword = new SwordBase(Item.ToolMaterial.IRON).setRegistryName("testSword").setUnlocalizedName("testSword");
+        lightSaber_dark = new SwordBase(Item.ToolMaterial.EMERALD).setRegistryName("lightSaber_dark").setUnlocalizedName("lightSaber_dark");
     }
 
 
+    public static void init(){
+        orb = new ItemBase().setRegistryName("orb").setUnlocalizedName("orb");
+    }
 
 }
