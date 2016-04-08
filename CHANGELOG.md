@@ -1,7 +1,9 @@
 # Change Log
 
-## [Unreleased](https://github.com/insuusvenerati/SWNMod/tree/HEAD)
+## [v0.0.2](https://github.com/insuusvenerati/SWNMod/tree/v0.0.2) (2016-04-08)
+[Full Changelog](https://github.com/insuusvenerati/SWNMod/compare/v0.0.1...v0.0.2)
 
+## [v0.0.1](https://github.com/insuusvenerati/SWNMod/tree/v0.0.1) (2016-04-08)
 **Merged pull requests:**
 
 - Fix build.gradle [\#1](https://github.com/insuusvenerati/SWNMod/pull/1) ([AlexIIL](https://github.com/AlexIIL))
