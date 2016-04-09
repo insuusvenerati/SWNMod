@@ -12,6 +12,7 @@ public class ModItems {
     public static Item fantSword;
     public static Item flameSword;
     public static Item blazeIngot;
+    public static Item crystal;
 
     public static Item orb;
 
@@ -23,6 +24,7 @@ public class ModItems {
         fantSword = new SwordBase(Item.ToolMaterial.EMERALD).setRegistryName("fantSword").setUnlocalizedName("fantSword");
         flameSword = new SwordBase(Item.ToolMaterial.EMERALD).setRegistryName("flameSword").setUnlocalizedName("flameSword");
         blazeIngot = new MaterialBase().setRegistryName("blazeIngot").setUnlocalizedName("blazeIngot");
+        crystal = new MaterialBase().setRegistryName("crystal").setUnlocalizedName("crystal");
     }
 
 }

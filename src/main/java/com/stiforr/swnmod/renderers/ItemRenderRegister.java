@@ -16,6 +16,7 @@ public final class ItemRenderRegister {
         reg(ModItems.fantSword);
         reg(ModItems.flameSword);
         reg(ModItems.blazeIngot);
+        reg(ModItems.crystal);
 
     }
 

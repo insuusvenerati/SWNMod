@@ -1,6 +1,7 @@
 package com.stiforr.swnmod;
 
 import com.stiforr.swnmod.handlers.ConfigurationHandler;
+import com.stiforr.swnmod.init.ModBlocks;
 import com.stiforr.swnmod.init.ModItems;
 import com.stiforr.swnmod.init.ModRecipes;
 import com.stiforr.swnmod.proxy.CommonProxy;
@@ -12,6 +13,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = References.MOD_ID, version = References.VERSION, name = References.NAME, guiFactory = References.GUI_FACTORY)
 public class SWNMod {
@@ -28,10 +30,11 @@ public class SWNMod {
         proxy.preInit(e);
 
         ModItems.init();
-        RegisterHelper.init();
+        ModBlocks.init();
+        RegisterHelper.initItems();
+        RegisterHelper.initBlocks();
 
         ConfigurationHandler.init(e.getSuggestedConfigurationFile());
-
 
         LogHelper.debug("PreInit Success");
     }
@@ -39,8 +42,11 @@ public class SWNMod {
     @Mod.EventHandler
     public static void init(FMLInitializationEvent e){
         proxy.init(e);
+
         ModRecipes.init();
+
         LogHelper.debug("Init Success");
+
     }
 
     @Mod.EventHandler
