@@ -22,3 +22,4 @@ eclipse
 run
 *.txt
 classes
+.github_changelog_generator
