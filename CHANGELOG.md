@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/insuusvenerati/SWNMod/tree/HEAD)
+
+[Full Changelog](https://github.com/insuusvenerati/SWNMod/compare/v0.0.3...HEAD)
+
+**Implemented enhancements:**
+
+- Add crystals that drop from ore [\#2](https://github.com/insuusvenerati/SWNMod/issues/2)
+
 ## [v0.0.3](https://github.com/insuusvenerati/SWNMod/tree/v0.0.3) (2016-04-09)
 [Full Changelog](https://github.com/insuusvenerati/SWNMod/compare/v0.0.2...v0.0.3)
 
