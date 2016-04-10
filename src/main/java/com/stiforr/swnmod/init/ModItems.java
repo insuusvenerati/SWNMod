@@ -14,6 +14,7 @@ public class ModItems {
     public static Item blazeIngot;
     public static Item crystal;
 
+
     public static Item orb;
 
 
@@ -25,6 +26,7 @@ public class ModItems {
         flameSword = new SwordBase(Item.ToolMaterial.DIAMOND).setRegistryName("flameSword").setUnlocalizedName("flameSword");
         blazeIngot = new MaterialBase().setRegistryName("blazeIngot").setUnlocalizedName("blazeIngot");
         crystal = new MaterialBase().setRegistryName("crystal").setUnlocalizedName("crystal");
+
 
 
     }

@@ -28,6 +28,8 @@ public class SwordBase extends ItemSword{
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
         tooltip.add(TextFormatting.GREEN.toString() + I18n.translateToLocal(References.MOD_ID + ".tooltip." + "lightSaber_dark"));
+        tooltip.add(I18n.translateToLocal(References.MOD_ID + ".tooltip." + "test_sword"));
+
     }
 
     /*public static String setTooltip(){

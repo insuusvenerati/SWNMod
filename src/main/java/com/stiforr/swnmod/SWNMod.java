@@ -43,7 +43,9 @@ public class SWNMod {
     public static void init(FMLInitializationEvent e){
         proxy.init(e);
 
+
         ModRecipes.init();
+
 
         LogHelper.debug("Init Success");
 
