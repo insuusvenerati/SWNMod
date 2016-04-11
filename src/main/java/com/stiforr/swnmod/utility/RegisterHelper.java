@@ -9,7 +9,7 @@ import static com.stiforr.swnmod.init.ModItems.*;
 public class RegisterHelper {
 
     public static void initItems(){
-        GameRegistry.registerItem(ModItems.orb);
+        GameRegistry.registerItem(orb);
         GameRegistry.registerItem(testSword);
         GameRegistry.registerItem(lightSaber_dark);
         GameRegistry.registerItem(fantSword);

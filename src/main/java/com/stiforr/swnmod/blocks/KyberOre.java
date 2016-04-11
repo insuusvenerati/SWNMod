@@ -32,7 +32,7 @@ public class KyberOre extends Block{
         this.setUnlocalizedName("kyberOre");
         this.setRegistryName("kyberOre");
         this.setCreativeTab(CreativeTabSWN.SWN_Tab);
-        this.setLightLevel(0.25f);
+        this.setLightLevel(0.50f);
 
     }
 

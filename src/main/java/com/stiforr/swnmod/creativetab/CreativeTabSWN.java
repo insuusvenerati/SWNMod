@@ -1,5 +1,6 @@
 package com.stiforr.swnmod.creativetab;
 
+import com.stiforr.swnmod.init.ModItems;
 import com.stiforr.swnmod.reference.References;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
@@ -11,7 +12,7 @@ public class CreativeTabSWN {
 
         @Override
         public Item getTabIconItem() {
-            return Items.bone;
+            return ModItems.crystal;
         }
     };
 
