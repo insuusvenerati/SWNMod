@@ -23,3 +23,5 @@ run
 *.txt
 classes
 .github_changelog_generator
+libs
+src/api
