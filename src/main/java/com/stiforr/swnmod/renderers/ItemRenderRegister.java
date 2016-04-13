@@ -10,7 +10,6 @@ public final class ItemRenderRegister {
 
 
     public static void registerItemRenderer(){
-        reg(ModItems.testSword);
         reg(ModItems.lightSaber_dark);
         reg(ModItems.orb);
         reg(ModItems.fantSword);

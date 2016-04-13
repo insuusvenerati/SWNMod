@@ -10,7 +10,6 @@ public class RegisterHelper {
 
     public static void initItems(){
         GameRegistry.registerItem(orb);
-        GameRegistry.registerItem(testSword);
         GameRegistry.registerItem(lightSaber_dark);
         GameRegistry.registerItem(fantSword);
         GameRegistry.registerItem(flameSword);

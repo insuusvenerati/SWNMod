@@ -7,7 +7,6 @@ import net.minecraft.item.Item;
 
 public class ModItems {
 
-    public static Item testSword;
     public static Item lightSaber_dark;
     public static Item fantSword;
     public static Item flameSword;
@@ -21,7 +20,7 @@ public class ModItems {
         orb = new ItemBase().setRegistryName("orb").setUnlocalizedName("orb");
 
 
-        testSword = new SwordBase(Item.ToolMaterial.IRON).setRegistryName("testSword").setUnlocalizedName("testSword");
+
         lightSaber_dark = new SwordBase(Item.ToolMaterial.EMERALD).setRegistryName("lightSaber_dark").setUnlocalizedName("lightSaber_dark");
         fantSword = new SwordBase(Item.ToolMaterial.EMERALD).setRegistryName("fantSword").setUnlocalizedName("fantSword");
         flameSword = new SwordBase(Item.ToolMaterial.EMERALD).setRegistryName("flameSword").setUnlocalizedName("flameSword");
