@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/insuusvenerati/SWNMod/tree/HEAD)
-
-[Full Changelog](https://github.com/insuusvenerati/SWNMod/compare/v0.0.3...HEAD)
+## [v1.0.0](https://github.com/insuusvenerati/SWNMod/tree/v1.0.0) (2016-04-13)
+[Full Changelog](https://github.com/insuusvenerati/SWNMod/compare/v0.0.3...v1.0.0)
 
 **Implemented enhancements:**
 
