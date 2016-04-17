@@ -1,7 +1,6 @@
 package com.stiforr.swnmod.utility;
 
 import com.stiforr.swnmod.init.ModBlocks;
-import com.stiforr.swnmod.init.ModItems;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import static com.stiforr.swnmod.init.ModItems.*;
