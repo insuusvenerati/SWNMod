@@ -27,3 +27,4 @@ libs
 src/api
 .floo
 .flooignore
+docs
