@@ -11,7 +11,7 @@ public class ItemBlockMeta extends ItemBlock{
         if (!(block instanceof IMetaBlockName)){
             throw new IllegalArgumentException(String.format("The given Block %s is not an instance of ISpecialBlockName!", block.getUnlocalizedName()));
         }
-        this.setMaxStackSize(0);
+        this.setMaxStackSize(64);
         this.setHasSubtypes(true);
     }
 

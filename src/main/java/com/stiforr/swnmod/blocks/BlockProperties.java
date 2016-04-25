@@ -27,7 +27,7 @@ public class BlockProperties extends Block implements IMetaBlockName{
         this.setCreativeTab(CreativeTabSWN.SWN_Tab);
         this.setHardness(hardness);
         this.setResistance(resistance);
-        this.setRegistryName("blockTest");
+        this.setRegistryName("block_properties");
         // Set the default state of the block
         this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumType.WHITE));
 
@@ -35,7 +35,7 @@ public class BlockProperties extends Block implements IMetaBlockName{
 
     @Override
     protected BlockState createBlockState() {
-        return new BlockState(this, new IProperty[] { TYPE });
+        return new BlockState(this, TYPE);
     }
 
     @Override
