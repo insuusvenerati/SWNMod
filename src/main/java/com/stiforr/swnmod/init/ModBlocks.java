@@ -23,14 +23,15 @@ public class ModBlocks {
 
     public static void init(){
         kyberOre = new KyberOre(Material.rock, ModItems.crystal, 0, 1, 2);
+		block_properties = new BlockProperties("block_properties", Material.iron, 1, 1);
 
 
     }
 
     public static void registerBlocks(){
-        GameRegistry.registerBlock(ModBlocks.kyberOre);
+//        GameRegistry.registerBlock(ModBlocks.kyberOre);
 //        GameRegistry.registerBlock(block_properties);
-        GameRegistry.registerBlock(block_properties = new BlockProperties("block_properties", Material.iron, 1, 1), ItemBlockMeta.class, "block_properties");
+        GameRegistry.registerBlock(block_properties, ItemBlockMeta.class, "block_properties");
 
     }
 
