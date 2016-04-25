@@ -1,6 +1,22 @@
 {
+  "forge_marker": 1,
+  "defaults": {
+    "model":"cube_all",
+    "transform": "forge:default-block"
+  },
   "variants": {
-    "type=white": { "model":"swnmod:block_properties_white" },
-    "type=black": { "model":"swnmod:block_properties_black" }
+    "inventory": [{ "textures": { "all": "swnmod:blocks/block_properties_white" } }],
+    "type": {
+      "white": {
+        "textures": {
+          "all": "swnmod:blocks/block_properties_white"
+        }
+      },
+      "black": {
+        "textures": {
+          "all": "swnmod:blocks/block_properties_black"
+        }
+      }
+    }
   }
 }

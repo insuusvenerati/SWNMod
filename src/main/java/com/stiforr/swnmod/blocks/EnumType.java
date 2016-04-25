@@ -4,24 +4,16 @@ import net.minecraft.util.IStringSerializable;
 
 public enum EnumType implements IStringSerializable{
 
-    WHITE(0, "white"),
-    BLACK(1, "black");
-
-    private int ID;
-    private String name;
-
-    private EnumType(int ID, String name) {
-        this.ID = ID;
-        this.name = name;
-    }
+    WHITE,
+    BLACK;
 
     @Override
     public String getName() {
-        return name;
+        return name().toLowerCase();
     }
 
     public int getID() {
-        return ID;
+        return ordinal();
     }
 
 

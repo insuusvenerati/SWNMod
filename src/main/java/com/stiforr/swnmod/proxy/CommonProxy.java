@@ -20,11 +20,6 @@ public class CommonProxy{
 
     }
 
-
-
-
-
-
     //TODO - Intialize the configuration
     /*@Override
     public void initConfiguration(FMLPreInitializationEvent event) {
