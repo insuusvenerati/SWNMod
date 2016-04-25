@@ -27,13 +27,6 @@ public class SWNMod {
     public static void preInit(FMLPreInitializationEvent e){
         proxy.preInit(e);
 
-
-
-        ModItems.init();
-        ModItems.registerItems();
-        ModBlocks.init();
-        ModBlocks.registerBlocks();
-
         ConfigurationHandler.init(e.getSuggestedConfigurationFile());
 
         LogHelper.debug("PreInit Success");
