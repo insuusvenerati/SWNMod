@@ -11,7 +11,7 @@ import net.minecraft.item.Item;
 public class BlockRenderRegister {
 
     public static void preInit(){
-        ModelBakery.addVariantName(Item.getItemFromBlock(ModBlocks.block_properties), "swnmod:block_properties_black", "swnmod:block_properties_white");
+        ModelBakery.registerItemVariants(Item.getItemFromBlock(ModBlocks.block_properties));
     }
 
     public static void regBlocks(Block block, int meta, String file){
