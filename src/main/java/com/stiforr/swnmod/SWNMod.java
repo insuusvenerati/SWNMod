@@ -7,7 +7,6 @@ import com.stiforr.swnmod.init.ModRecipes;
 import com.stiforr.swnmod.proxy.CommonProxy;
 import com.stiforr.swnmod.reference.References;
 import com.stiforr.swnmod.utility.LogHelper;
-import com.stiforr.swnmod.utility.RegisterHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -28,10 +27,12 @@ public class SWNMod {
     public static void preInit(FMLPreInitializationEvent e){
         proxy.preInit(e);
 
+
+
         ModItems.init();
+        ModItems.registerItems();
         ModBlocks.init();
-        RegisterHelper.initItems();
-        RegisterHelper.initBlocks();
+        ModBlocks.registerBlocks();
 
         ConfigurationHandler.init(e.getSuggestedConfigurationFile());
 
