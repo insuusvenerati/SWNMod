@@ -1,5 +1,6 @@
 package com.stiforr.swnmod.proxy;
 
+import com.stiforr.swnmod.renderers.BlockRenderRegister;
 import com.stiforr.swnmod.renderers.ItemRenderRegister;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -12,11 +13,14 @@ public class ClientProxy extends CommonProxy{
     public void preInit(FMLPreInitializationEvent e) {
         super.preInit(e);
 
+
+
     }
 
     @Override
     public void init(FMLInitializationEvent e){
         super.init(e);
+        BlockRenderRegister.preInit();
         ItemRenderRegister.registerItemRenderer();
     }
 
