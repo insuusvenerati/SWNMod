@@ -4,7 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockMeta extends ItemBlock{
+public class ItemBlockMeta extends ItemBlock {
 
     public ItemBlockMeta(Block block){
         super(block);
@@ -23,5 +23,4 @@ public class ItemBlockMeta extends ItemBlock{
     public String getUnlocalizedName(ItemStack stack) {
         return super.getUnlocalizedName(stack) + "." + ((IMetaBlockName)this.block).getSpecialName(stack);
     }
-
 }
