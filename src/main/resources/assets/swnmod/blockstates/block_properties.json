@@ -16,6 +16,21 @@
         "textures": {
           "all": "swnmod:blocks/block_properties_black"
         }
+      },
+      "copper": {
+        "textures": {
+          "all": "swnmod:blocks/copper_ore"
+        }
+      },
+      "tin": {
+        "textures": {
+          "all": "swnmod:blocks/tin_ore"
+        }
+      },
+      "lead": {
+        "textures": {
+          "all": "swnmod:blocks/lead_ore"
+        }
       }
     }
   }

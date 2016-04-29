@@ -4,8 +4,15 @@ import net.minecraft.util.IStringSerializable;
 
 public enum EnumType implements IStringSerializable{
 
-    WHITE,
-    BLACK;
+
+    COPPER,
+    TIN,
+    LEAD;
+    /*WHITE,
+    BLACK;*/
+
+
+
 
     @Override
     public String getName() {
@@ -21,5 +28,7 @@ public enum EnumType implements IStringSerializable{
     public String toString() {
         return getName();
     }
+
+
 
 }

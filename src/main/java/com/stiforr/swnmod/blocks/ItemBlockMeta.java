@@ -23,4 +23,5 @@ public class ItemBlockMeta extends ItemBlock {
     public String getUnlocalizedName(ItemStack stack) {
         return super.getUnlocalizedName(stack) + "." + ((IMetaBlockName)this.block).getSpecialName(stack);
     }
+
 }

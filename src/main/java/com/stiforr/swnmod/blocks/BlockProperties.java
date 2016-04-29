@@ -16,20 +16,22 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class BlockProperties extends Block implements IMetaBlockName{
+public class BlockProperties extends Block{
 
     public static final PropertyEnum TYPE = PropertyEnum.create("type", EnumType.class);
+    public String[] SUBNAMES;
 
 
-    public BlockProperties(String unlocalizedName, Material material, float hardness, float resistance){
+    public BlockProperties(String unlocalizedName, Material material, float hardness, float resistance, String[] subnames){
         super(material);
+        SUBNAMES = subnames;
         this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(CreativeTabSWN.SWN_Tab);
         this.setHardness(hardness);
         this.setResistance(resistance);
         this.setRegistryName("block_properties");
         // Set the default state of the block
-        this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumType.WHITE));
+        this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumType.COPPER));
 
     }
 
@@ -38,9 +40,20 @@ public class BlockProperties extends Block implements IMetaBlockName{
         return new BlockState(this, TYPE);
     }
 
+
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(TYPE, meta == 0 ? EnumType.WHITE : EnumType.BLACK);
+        switch (meta){
+            case 0:
+                return getDefaultState().withProperty(TYPE, EnumType.COPPER);
+            case 1:
+                return getDefaultState().withProperty(TYPE, EnumType.TIN);
+            case 2:
+                return getDefaultState().withProperty(TYPE, EnumType.LEAD);
+            default:
+                return getDefaultState().withProperty(TYPE, EnumType.COPPER);
+        }
+
     }
 
     @Override
@@ -58,12 +71,10 @@ public class BlockProperties extends Block implements IMetaBlockName{
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List list) {
         list.add(new ItemStack(itemIn, 1, 0)); //Meta 0
         list.add(new ItemStack(itemIn, 1, 1)); //Meta 1
+        list.add(new ItemStack(itemIn, 1, 2)); //Meta 2
     }
 
-    @Override
-    public String getSpecialName(ItemStack stack) {
-        return stack.getItemDamage() == 0 ? "white" : "black";
-    }
+
 
     @Override
     public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos) {
