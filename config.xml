@@ -8,6 +8,6 @@
 	<modid>swnmod</modid>
     <mcversion>1.8.9</mcversion>
 	<group>com.stiforr.swnmod</group>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<isDev>false</isDev>
 </config>
