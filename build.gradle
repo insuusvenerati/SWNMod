@@ -26,6 +26,9 @@ buildscript {
 
 
 apply plugin : 'net.minecraftforge.gradle.forge'
+apply plugin : 'java'
+apply plugin: 'maven-publish'
+apply plugin: 'maven'
 
 version
 group= "com.stiforr.swnmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -58,6 +61,9 @@ minecraft {
     // simply re-run your setup task after changing the mappings to update your workspace.
     mappings = "stable_22"
 }
+
+
+
 
 
 task incrementPatch << {
@@ -367,7 +373,42 @@ idea {
     }
 }
 
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
 
-/*sourceSets {
-    main { output.resourcesDir = output.classesDir }
-}*/
+            artifact sourceJar
+        }
+    }
+
+    repositories {
+        maven {
+            url "$buildDir/repo"
+        }
+    }
+}
+
+repositories {
+	maven {
+		url "http://192.168.1.42:8081/nexus/content/repositories/releases/"}
+
+	}
+	
+uploadArchives {
+    repositories {
+       mavenDeployer {
+             repository(url: "http://192.168.1.42:8081/nexus/content/repositories/releases/") {
+             authentication(userName: mavenUser, password: mavenPassword)
+}
+             pom.version = project.version
+             pom.artifactId = "swnmod"
+             pom.groupId = "com.stiforr"
+       }
+    }
+}
+	
+	
+//sourceSets {
+  //  main { output.resourcesDir = output.classesDir }
+// }
