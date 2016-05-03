@@ -1,7 +1,18 @@
 # Change Log
 
+## [Unreleased](https://github.com/insuusvenerati/SWNMod/tree/HEAD)
+
+[Full Changelog](https://github.com/insuusvenerati/SWNMod/compare/v1.0.0...HEAD)
+
+**Merged pull requests:**
+
+- Feature/block states [\#11](https://github.com/insuusvenerati/SWNMod/pull/11) ([FusionLord](https://github.com/FusionLord))
+- Merge for now [\#8](https://github.com/insuusvenerati/SWNMod/pull/8) ([insuusvenerati](https://github.com/insuusvenerati))
+
 ## [v1.0.0](https://github.com/insuusvenerati/SWNMod/tree/v1.0.0) (2016-04-13)
 [Full Changelog](https://github.com/insuusvenerati/SWNMod/compare/v0.0.3...v1.0.0)
+
+**Implemented enhancements:**
 
 - Add crystals that drop from ore [\#2](https://github.com/insuusvenerati/SWNMod/issues/2)
 
@@ -12,6 +23,8 @@
 [Full Changelog](https://github.com/insuusvenerati/SWNMod/compare/v0.0.1...v0.0.2)
 
 ## [v0.0.1](https://github.com/insuusvenerati/SWNMod/tree/v0.0.1) (2016-04-08)
+**Merged pull requests:**
+
 - Fix build.gradle [\#1](https://github.com/insuusvenerati/SWNMod/pull/1) ([AlexIIL](https://github.com/AlexIIL))
 
 

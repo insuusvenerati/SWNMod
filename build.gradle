@@ -398,7 +398,7 @@ repositories {
 uploadArchives {
     repositories {
        mavenDeployer {
-             repository(url: "http://192.168.1.42:8081/nexus/content/repositories/releases/") {
+             repository(url: "http://192.168.1.34:8081/artifactory/list/my-mods/") {
              authentication(userName: mavenUser, password: mavenPassword)
 }
              pom.version = project.version
