@@ -1,13 +1,10 @@
 package com.stiforr.swnmod.init;
 
 import com.stiforr.swnmod.blocks.BlockProperties;
-import com.stiforr.swnmod.blocks.ItemBlockMeta;
 import com.stiforr.swnmod.blocks.KyberOre;
 import com.stiforr.swnmod.utility.ItemMultiTextureHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemMultiTexture;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
@@ -16,7 +13,7 @@ public class ModBlocks {
     public static BlockProperties block_properties;
 
 
-    public static final String[] SubNames = new String[] {"copper", "tin", "lead"};
+    private static final String[] SubNames = new String[] {"copper", "tin", "lead"};
 
 
 

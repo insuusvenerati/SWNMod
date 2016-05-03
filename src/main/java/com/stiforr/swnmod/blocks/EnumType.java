@@ -8,8 +8,6 @@ public enum EnumType implements IStringSerializable{
     COPPER,
     TIN,
     LEAD;
-    /*WHITE,
-    BLACK;*/
 
 
 

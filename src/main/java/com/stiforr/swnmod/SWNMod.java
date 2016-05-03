@@ -1,8 +1,6 @@
 package com.stiforr.swnmod;
 
 import com.stiforr.swnmod.handlers.ConfigurationHandler;
-import com.stiforr.swnmod.init.ModBlocks;
-import com.stiforr.swnmod.init.ModItems;
 import com.stiforr.swnmod.init.ModRecipes;
 import com.stiforr.swnmod.proxy.CommonProxy;
 import com.stiforr.swnmod.reference.References;
