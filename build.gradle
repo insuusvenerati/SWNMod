@@ -381,16 +381,6 @@ idea {
     }
 }
 
-task install (type: Upload) {
-    repositories.mavenInstaller {
-        pom.version = project.version
-        pom.artifactId = project.name
-        pom.groupId = project.group
-        pom.packaging = "zip"
-    }
-    configuration =
-            project.configurations.getByName(Dependency.ARCHIVES_CONFIGURATION)
-}
 
 artifactory {
     contextUrl = "${artifactory_contextUrl}"   //The base Artifactory URL if not overridden by the publisher/resolver
