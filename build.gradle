@@ -69,7 +69,17 @@ minecraft {
     mappings = "stable_22"
 }
 
+repositories {
+    maven {
+        url 'http://dl.tsr.me/artifactory/libs-release'
 
+    }
+}
+
+dependencies {
+    compile(group: 'com.fireball1725.devworld', name: 'devworld', version: '1.8.9-b9-universal')
+
+}
 
 
 
