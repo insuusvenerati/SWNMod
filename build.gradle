@@ -17,9 +17,17 @@ buildscript {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
+        maven {
+            url 'http://192.168.1.34:8081/artifactory/plugins-release'
+            credentials {
+                username = "${artifactory_user}"
+                password = "${artifactory_password}"
+            }
+        }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.2.0"
     }
 }
 
@@ -29,6 +37,10 @@ apply plugin : 'net.minecraftforge.gradle.forge'
 apply plugin : 'java'
 apply plugin: 'maven-publish'
 apply plugin: 'maven'
+
+allprojects {
+    apply plugin: "com.jfrog.artifactory"
+}
 
 version
 group= "com.stiforr.swnmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -373,40 +385,27 @@ idea {
     }
 }
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
+artifactory {
+    contextUrl = "${artifactory_contextUrl}"   //The base Artifactory URL if not overridden by the publisher/resolver
+    publish {
+        repository {
+            repoKey = 'swnmod'
+            username = "${artifactory_user}"
+            password = "${artifactory_password}"
+            maven = true
 
-            artifact sourceJar
         }
     }
+    resolve {
+        repository {
+            repoKey = 'libs-release'
+            username = "${artifactory_user}"
+            password = "${artifactory_password}"
+            maven = true
 
-    repositories {
-        maven {
-            url "$buildDir/repo"
-        }
-    }
-}
-
-repositories {
-	maven {
-		url "http://192.168.1.42:8081/nexus/content/repositories/releases/"}
-
-	}
-
-
-uploadArchives {
-    repositories {
-        mavenDeployer {
-             
-            pom.version = project.version
-            pom.artifactId = "swnmod"
-            pom.groupId = "com.stiforr"
         }
     }
 }
-	
 	
 //sourceSets {
   //  main { output.resourcesDir = output.classesDir }
