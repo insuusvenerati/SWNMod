@@ -9,8 +9,8 @@ bin
 # idea
 out
 *.iws
-*.iml
-.idea
+
+
 
 # gradle
 build
