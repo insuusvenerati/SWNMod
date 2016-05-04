@@ -394,6 +394,18 @@ repositories {
 		url "http://192.168.1.42:8081/nexus/content/repositories/releases/"}
 
 	}
+
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+             
+            pom.version = project.version
+            pom.artifactId = "swnmod"
+            pom.groupId = "com.stiforr"
+        }
+    }
+}
 	
 	
 //sourceSets {
