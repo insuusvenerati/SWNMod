@@ -395,19 +395,6 @@ repositories {
 
 	}
 	
-uploadArchives {
-    repositories {
-       mavenDeployer {
-             repository(url: "http://192.168.1.34:8081/artifactory/list/my-mods/") {
-             authentication(userName: mavenUser, password: mavenPassword)
-}
-             pom.version = project.version
-             pom.artifactId = "swnmod"
-             pom.groupId = "com.stiforr"
-       }
-    }
-}
-	
 	
 //sourceSets {
   //  main { output.resourcesDir = output.classesDir }
