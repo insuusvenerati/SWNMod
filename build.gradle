@@ -37,10 +37,7 @@ apply plugin : 'net.minecraftforge.gradle.forge'
 apply plugin : 'java'
 apply plugin: 'maven-publish'
 apply plugin: 'maven'
-
-allprojects {
-    apply plugin: "com.jfrog.artifactory"
-}
+apply plugin: "com.jfrog.artifactory"
 
 version
 group= "com.stiforr.swnmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -383,6 +380,17 @@ idea {
     module {
         inheritOutputDirs = true
     }
+}
+
+task install (type: Upload) {
+    repositories.mavenInstaller {
+        pom.version = project.version
+        pom.artifactId = project.name
+        pom.groupId = project.group
+        pom.packaging = "zip"
+    }
+    configuration =
+            project.configurations.getByName(Dependency.ARCHIVES_CONFIGURATION)
 }
 
 artifactory {
