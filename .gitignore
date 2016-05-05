@@ -9,7 +9,8 @@ bin
 # idea
 out
 *.iws
-/.idea/workspace.xml
+/.idea
+
 
 
 
