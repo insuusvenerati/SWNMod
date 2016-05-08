@@ -47,7 +47,7 @@ public class ConfigurationHandler {
     }
 
 
-    public void loadConfiguration(){
+    public static void loadConfiguration(){
         //TODO Need to actually use this somewhere
         debugHelper = configuration.getBoolean("debug", Configuration.CATEGORY_GENERAL, false, "Turn debug mode on");
 //        testValue = configuration.getBoolean("configValue", Configuration.CATEGORY_GENERAL, false, "this is an example config value");
