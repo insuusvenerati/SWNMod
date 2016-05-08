@@ -35,9 +35,7 @@ buildscript {
 
 apply plugin : 'net.minecraftforge.gradle.forge'
 
-allprojects {
-    apply plugin: "com.jfrog.artifactory"
-}
+
 
 version
 group= "com.stiforr.swnmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
