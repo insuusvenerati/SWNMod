@@ -35,7 +35,9 @@ buildscript {
 
 apply plugin : 'net.minecraftforge.gradle.forge'
 
-apply plugin: "com.jfrog.artifactory"
+allprojects {
+    apply plugin: "com.jfrog.artifactory"
+}
 
 version
 group= "com.stiforr.swnmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -395,7 +397,7 @@ artifactory {
     contextUrl = "${artifactory_contextUrl}"   //The base Artifactory URL if not overridden by the publisher/resolver
     publish {
         repository {
-            repoKey = 'swnmod'
+            repoKey = 'libs-release-local'
             username = "${artifactory_user}"
             password = "${artifactory_password}"
             maven = true
@@ -405,7 +407,7 @@ artifactory {
     }
     resolve {
         repository {
-            repoKey = 'libs-release'
+            repoKey = 'release'
             username = "${artifactory_user}"
             password = "${artifactory_password}"
             maven = true
