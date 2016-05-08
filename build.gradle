@@ -18,7 +18,7 @@ buildscript {
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
         maven {
-            url 'http://dl.stiforr.com/artifactory/snapshot'
+            url 'http://dl.stiforr.com/artifactory/libs-release'
             credentials {
                 username = "${artifactory_user}"
                 password = "${artifactory_password}"
